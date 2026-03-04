@@ -1,0 +1,80 @@
+{
+  "expo": {
+    "plugins": [
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "회원가입을 위해 제출할 사원증/명함 이미지를 위해 사진에 접근을 허용해 주세요.",
+          "savePhotosPermission": "회원가입을 위해 제출할 사원증/명함 이미지를 위해 사진 저장을 허용해 주세요.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "targetSdkVersion": 35
+          }
+        }
+      ]
+    ],
+    "name": "똑똑폰",
+    "slug": "ddokddokphone",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon_512.png",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "buildNumber": "1.0.0",
+      "bundleIdentifier": "com.ddokddokphone.ios",
+      "splash": {
+        "image": "./assets/splash1.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#ffffff"
+      },
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "회원가입을 위해 제출할 사원증/명함 이미지를 위해 사진에 접근을 허용해 주세요.",
+        "NSPhotoLibraryAddUsageDescription": "회원가입을 위해 제출할 사원증/명함 이미지를 위해 사진 저장을 허용해 주세요.",
+        "NSCameraUsageDescription": "회원가입을 위해 제출할 사원증/명함 이미지를 위해 카메라에 접근을 허용해 주세요.",
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon_512.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "CAMERA",
+        "NOTIFICATIONS",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.ACCESS_MEDIA_LOCATION",
+        "android.permission.READ_MEDIA_VISUAL_USER_SELECTED",
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.READ_MEDIA_VIDEO",
+        "android.permission.READ_MEDIA_AUDIO"
+      ],
+      "package": "com.ddokddokphone.android",
+      "googleServicesFile": "./google-services.json",
+      "versionCode": 1
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "bff64703-c500-470c-b211-c5c271970226"
+      }
+    },
+    "runtimeVersion": "1.0.0",
+    "updates": {
+      "url": "https://u.expo.dev/bff64703-c500-470c-b211-c5c271970226"
+    },
+    "owner": "seongyooo"
+  }
+}

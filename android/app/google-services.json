@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "404770986522",
+    "project_id": "ddokddokphone-51b1a",
+    "storage_bucket": "ddokddokphone-51b1a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:404770986522:android:9fdd6904daaeda583e0fa3",
+        "android_client_info": {
+          "package_name": "com.ddokddokphone.android"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4IeDwHEHj3a4wJIgf1qb6naSAtPA8lII"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
