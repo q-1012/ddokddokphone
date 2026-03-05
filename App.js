@@ -7,7 +7,6 @@ import { View, ImageBackground, StyleSheet, Alert, Platform, BackHandler, ToastA
 import * as Notifications from "expo-notifications";
 import * as Device from "expo-device";
 import * as Linking from 'expo-linking';
-import * as MediaLibrary from 'expo-media-library';
 import * as ScreenCapture from 'expo-screen-capture';
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { enableScreens } from 'react-native-screens';
@@ -50,7 +49,6 @@ export default function App() {
   const [notification, setNotification] = useState(false);
   const notificationListener = useRef();
   const responseListener = useRef();
-  const [permissionResponse, requestPermission] = MediaLibrary.usePermissions();
   const [navUri, setNavUri] = useState('');
   const splashHidden = useRef(false);
 
@@ -124,9 +122,6 @@ export default function App() {
       }
     });
 
-    //미디어 라이브러리 권한
-    requestMediaLibraryPermissions();
-
     //카메라 권한
     //getCameraPermission();
 
@@ -140,16 +135,6 @@ export default function App() {
       BackHandler.removeEventListener('hardwareBackPress', onAndroidBackPress);
     };
   }, []);
-
-  const requestMediaLibraryPermissions = async () => {
-    const { status } = await MediaLibrary.requestPermissionsAsync();
-
-    if (status !== 'granted') {
-      //console.log('Media library permission denied');
-      //Linking.openSettings();
-      return;
-    }
-  };
 
   const getCameraPermission = async () => {
     const { status } = await Camera.requestCameraPermissionsAsync();
@@ -181,8 +166,8 @@ export default function App() {
       }
       // Learn more about projectId:
       // https://docs.expo.dev/push-notifications/push-notifications-setup/#configure-projectid
-      token = (await Notifications.getExpoPushTokenAsync({ projectId: 'bff64703-c500-470c-b211-c5c271970226' }));
-      //token = (await Notifications.getDevicePushTokenAsync({ projectId: 'd13cd83a-e231-48c3-af78-7bbb323b3224' }));
+      token = (await Notifications.getExpoPushTokenAsync({ projectId: 'e3561241-22cf-4b1d-9539-2f00e668e8cc' }));
+      
       if(token && token.data) {
         rtv=token.data;
 
