@@ -14,7 +14,8 @@
         "expo-build-properties",
         {
           "android": {
-            "targetSdkVersion": 35
+            "compileSdkVersion": 36,
+            "targetSdkVersion": 36
           }
         }
       ]
@@ -53,9 +54,14 @@
         "android.permission.READ_MEDIA_VIDEO",
         "android.permission.READ_MEDIA_AUDIO"
       ],
+      "splash": {
+        "image": "./assets/icon_512.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#ffffff"
+      },
       "package": "com.ddokddokphone.android",
       "googleServicesFile": "./google-services.json",
-      "versionCode": 1
+      "versionCode": 3
     },
     "web": {
       "favicon": "./assets/favicon.png"
