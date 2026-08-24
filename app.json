@@ -54,11 +54,6 @@
         "android.permission.READ_MEDIA_VIDEO",
         "android.permission.READ_MEDIA_AUDIO"
       ],
-      "splash": {
-        "image": "./assets/icon_512.png",
-        "resizeMode": "contain",
-        "backgroundColor": "#ffffff"
-      },
       "package": "com.ddokddokphone.android",
       "googleServicesFile": "./google-services.json",
       "versionCode": 3
